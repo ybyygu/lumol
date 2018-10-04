@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `md` mod in crate `lumol`."><meta name="keywords" content="rust, rustlang, rust-lang, md"><title>lumol::sim::md - Rust</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><!-- Load KaTeX (https://katex.org/) to render equations -->
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+      integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv"
+      crossorigin="anonymous">
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+        integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+        crossorigin="anonymous">
+</script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
+        crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]});">
+</script>
+
+</head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module md</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'><a href='../../index.html'>lumol</a>::<wbr><a href='../index.html'>sim</a></p><script>window.sidebarCurrent = {name: 'md', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../../index.html'>lumol</a>::<wbr><a href='../index.html'>sim</a>::<wbr><a class="mod" href=''>md</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span></span></h1><div class='docblock'><p>Molecular dynamics algorithms.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AnisoBerendsenBarostat.html"
+                                  title='struct lumol::sim::md::AnisoBerendsenBarostat'>AnisoBerendsenBarostat</a></td>
+                           <td class='docblock-short'>
+                                <p>Anisotropic Berendsen barostat integrator based on velocity-Verlet. This one
+neither reversible nor symplectic.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BerendsenBarostat.html"
+                                  title='struct lumol::sim::md::BerendsenBarostat'>BerendsenBarostat</a></td>
+                           <td class='docblock-short'>
+                                <p>Berendsen barostat integrator based on velocity-Verlet. This one neither
+reversible nor symplectic.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BerendsenThermostat.html"
+                                  title='struct lumol::sim::md::BerendsenThermostat'>BerendsenThermostat</a></td>
+                           <td class='docblock-short'>
+                                <p>Berendsen thermostat.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LeapFrog.html"
+                                  title='struct lumol::sim::md::LeapFrog'>LeapFrog</a></td>
+                           <td class='docblock-short'>
+                                <p>Leap-frog integrator. This one is reversible and symplectic.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MolecularDynamics.html"
+                                  title='struct lumol::sim::md::MolecularDynamics'>MolecularDynamics</a></td>
+                           <td class='docblock-short'>
+                                <p>Molecular Dynamics propagator for the simulation.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveRotation.html"
+                                  title='struct lumol::sim::md::RemoveRotation'>RemoveRotation</a></td>
+                           <td class='docblock-short'>
+                                <p>Remove global rotation from the system</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTranslation.html"
+                                  title='struct lumol::sim::md::RemoveTranslation'>RemoveTranslation</a></td>
+                           <td class='docblock-short'>
+                                <p>Remove global translation from the system</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RescaleThermostat.html"
+                                  title='struct lumol::sim::md::RescaleThermostat'>RescaleThermostat</a></td>
+                           <td class='docblock-short'>
+                                <p>Velocity rescaling thermostat.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Rewrap.html"
+                                  title='struct lumol::sim::md::Rewrap'>Rewrap</a></td>
+                           <td class='docblock-short'>
+                                <p>Rewrap all molecules' centers of mass to lie within the unit cell.
+Individual atoms in a molecule may still lie outside of the cell.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VelocityVerlet.html"
+                                  title='struct lumol::sim::md::VelocityVerlet'>VelocityVerlet</a></td>
+                           <td class='docblock-short'>
+                                <p>Velocity-Verlet integrator. This one is reversible and symplectic.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Verlet.html"
+                                  title='struct lumol::sim::md::Verlet'>Verlet</a></td>
+                           <td class='docblock-short'>
+                                <p>Verlet integrator. This one is reversible and symplectic.</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Control.html"
+                                  title='trait lumol::sim::md::Control'>Control</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait for controlling some parameters in a system during a simulation.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Integrator.html"
+                                  title='trait lumol::sim::md::Integrator'>Integrator</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Integrator</code> trait define integrator interface for molecular dynamics.
+An integrator is an algorithm responsible for propagating the equations of
+motion in the system.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Thermostat.html"
+                                  title='trait lumol::sim::md::Thermostat'>Thermostat</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait for controls usable as thermostats</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../../";window.currentCrate = "lumol";</script><script src="../../../aliases.js"></script><script src="../../../main.js"></script><script defer src="../../../search-index.js"></script></body></html>
